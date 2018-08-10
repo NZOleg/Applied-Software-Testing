@@ -18,7 +18,7 @@ class TestModule extends Component {
 		  isValid = false;
     }
 
-    if (this.props.prediscountPrice <= 0){
+    if (this.props.prediscountPrice <= 0 || !Number.isFinite(this.props.prediscountPrice)){
       isValid = false;
     }
 
