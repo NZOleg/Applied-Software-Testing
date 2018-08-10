@@ -26,11 +26,10 @@ class TestModule extends Component {
   };
 
   render() {
-    console.log("here");
     let discount;
 
     if (!this.checkValidity()){
-      return "error";
+      return <div className="discount">error</div>;
     }
 
     if (this.props.customerType === "normal"){
@@ -58,7 +57,7 @@ class TestModule extends Component {
 
 
 
-    return discount;
+    return <div className="discount">{discount}</div>;
   }
 }
 TestModule.propTypes  = {
